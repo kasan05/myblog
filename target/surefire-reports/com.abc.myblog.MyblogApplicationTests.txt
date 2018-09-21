@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.abc.myblog.MyblogApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.334 s <<< FAILURE! - in com.abc.myblog.MyblogApplicationTests
+testDeleteBlog(com.abc.myblog.MyblogApplicationTests)  Time elapsed: 0.112 s  <<< ERROR!
+javax.persistence.EntityNotFoundException: Unable to find com.abc.myblog.model.Blog with id 16
+	at com.abc.myblog.MyblogApplicationTests.testDeleteBlog(MyblogApplicationTests.java:54)
+
