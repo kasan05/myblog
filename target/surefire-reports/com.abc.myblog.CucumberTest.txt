@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.abc.myblog.CucumberTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.838 s - in com.abc.myblog.CucumberTest

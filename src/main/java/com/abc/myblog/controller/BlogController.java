@@ -3,6 +3,8 @@ package com.abc.myblog.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -27,8 +29,9 @@ public class BlogController {
 	
 	@PostMapping(value="/blogs")
 	@ApiOperation(value="Creating New Blog")
-	public void addBlog(@RequestBody BlogDto blogDto) {
-		blogService.saveBlog(blogDto);
+	public ResponseEntity<String> addBlog(@RequestBody BlogDto blogDto) {
+		String id = blogService.saveBlog(blogDto);
+		return new ResponseEntity<>(id,HttpStatus.CREATED);
 	}
 	
 	@GetMapping(value="/blogs")
